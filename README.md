@@ -2,9 +2,7 @@
 
 A comprehensive JavaFX application for managing JBoss EAP and WildFly servers. This application provides a user-friendly interface to connect to remote JBoss/WildFly servers and manage JMS queues and EJBs.
 
-![JBoss/WildFly Manager Screenshot](docs/screenshot.png)
-
-*Note: The screenshot image is a placeholder. Replace it with an actual screenshot of the application when available.*
+![JBoss/WildFly Manager Screenshot](docs/scr-shot.png)
 
 ## Table of Contents
 
