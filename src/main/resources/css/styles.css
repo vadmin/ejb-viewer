@@ -1,0 +1,137 @@
+/* Main application styles */
+
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 12px;
+    -fx-background-color: #f5f5f5;
+}
+
+/* Connection panel styles */
+.connection-panel {
+    -fx-background-color: #e0e0e0;
+    -fx-padding: 10px;
+    -fx-border-color: #c0c0c0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.connection-panel .label {
+    -fx-font-weight: bold;
+}
+
+.connection-panel .text-field {
+    -fx-pref-width: 150px;
+}
+
+.connection-panel .button {
+    -fx-background-color: #4a6984;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.connection-panel .button:hover {
+    -fx-background-color: #5a7994;
+}
+
+/* Status indicator */
+.status-connected {
+    -fx-text-fill: #008800;
+}
+
+.status-disconnected {
+    -fx-text-fill: #cc0000;
+}
+
+/* Tree view styles */
+.tree-view {
+    -fx-background-color: white;
+    -fx-border-color: #c0c0c0;
+    -fx-border-width: 1;
+}
+
+.tree-cell {
+    -fx-padding: 5 0 5 0;
+}
+
+.tree-cell:selected {
+    -fx-background-color: #4a6984;
+    -fx-text-fill: white;
+}
+
+/* Details panel styles */
+.details-panel {
+    -fx-background-color: white;
+    -fx-padding: 10px;
+    -fx-border-color: #c0c0c0;
+    -fx-border-width: 1;
+}
+
+.details-panel .label {
+    -fx-font-weight: bold;
+}
+
+.details-panel .separator {
+    -fx-padding: 5 0 5 0;
+}
+
+/* Operation buttons */
+.operation-button {
+    -fx-background-color: #4a6984;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-min-width: 80px;
+}
+
+.operation-button:hover {
+    -fx-background-color: #5a7994;
+}
+
+.operation-button.start {
+    -fx-background-color: #008800;
+}
+
+.operation-button.start:hover {
+    -fx-background-color: #00aa00;
+}
+
+.operation-button.stop {
+    -fx-background-color: #cc0000;
+}
+
+.operation-button.stop:hover {
+    -fx-background-color: #ff0000;
+}
+
+/* Status bar styles */
+.status-bar {
+    -fx-background-color: #e0e0e0;
+    -fx-padding: 5px;
+    -fx-border-color: #c0c0c0;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* Split pane styles */
+.split-pane {
+    -fx-background-color: transparent;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-background-color: #c0c0c0;
+    -fx-padding: 0 1 0 1;
+}
+
+.split-pane:vertical > .split-pane-divider {
+    -fx-background-color: #c0c0c0;
+    -fx-padding: 1 0 1 0;
+}
+
+/* Refresh button */
+.refresh-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #4a6984;
+    -fx-font-weight: bold;
+    -fx-padding: 2px;
+}
+
+.refresh-button:hover {
+    -fx-background-color: #e0e0e0;
+}

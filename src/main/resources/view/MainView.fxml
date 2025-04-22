@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.jbossmanager.controller.MainController"
+            prefHeight="900.0" prefWidth="1000.0">
+    
+    <!-- Top: Connection Panel -->
+    <top>
+        <VBox styleClass="connection-panel">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <padding>
+                    <Insets top="5" right="10" bottom="5" left="10"/>
+                </padding>
+                
+                <Label text="Server:"/>
+                <TextField fx:id="hostField" promptText="localhost"/>
+                
+                <Label text="Port:"/>
+                <TextField fx:id="portField" promptText="9990" prefWidth="80"/>
+                
+                <Label text="Username:"/>
+                <TextField fx:id="usernameField"/>
+                
+                <Label text="Password:"/>
+                <PasswordField fx:id="passwordField"/>
+                
+                <Button fx:id="connectButton" text="Connect" onAction="#handleConnect"/>
+            </HBox>
+            
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <padding>
+                    <Insets top="5" right="10" bottom="5" left="10"/>
+                </padding>
+                
+                <Label text="Status:"/>
+                <Label fx:id="statusLabel" text="Disconnected" styleClass="status-disconnected"/>
+            </HBox>
+        </VBox>
+    </top>
+    
+    <!-- Center: Split Pane with Resources and Details -->
+    <center>
+        <SplitPane dividerPositions="0.3" VBox.vgrow="ALWAYS">
+            <!-- Left: Resources Tree -->
+            <VBox>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <padding>
+                        <Insets top="5" right="10" bottom="5" left="10"/>
+                    </padding>
+                    
+                    <Label text="Resources" style="-fx-font-weight: bold;"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button fx:id="refreshButton" text="Refresh" styleClass="refresh-button" onAction="#handleRefresh"/>
+                </HBox>
+                
+                <TreeView fx:id="resourcesTree" VBox.vgrow="ALWAYS" onMouseClicked="#handleResourceSelection"/>
+            </VBox>
+            
+            <!-- Right: Details Panel -->
+            <VBox styleClass="details-panel">
+                <Label fx:id="detailsTitleLabel" text="Details" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <Separator/>
+                
+                <GridPane fx:id="detailsGrid" vgap="5" hgap="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    
+                    <!-- Details will be populated dynamically -->
+                </GridPane>
+                
+                <Separator/>
+                
+                <VBox fx:id="operationsBox" spacing="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    
+                    <Label text="Operations:" style="-fx-font-weight: bold;"/>
+                    
+                    <HBox spacing="10">
+                        <Button fx:id="startButton" text="Start" styleClass="operation-button, start" onAction="#handleStart" disable="true"/>
+                        <Button fx:id="stopButton" text="Stop" styleClass="operation-button, stop" onAction="#handleStop" disable="true"/>
+                        <Button fx:id="restartButton" text="Restart" styleClass="operation-button" onAction="#handleRestart" disable="true"/>
+                    </HBox>
+                    
+                    <HBox spacing="10">
+                        <Button fx:id="deployButton" text="Deploy" styleClass="operation-button" onAction="#handleDeploy" disable="true"/>
+                        <Button fx:id="undeployButton" text="Undeploy" styleClass="operation-button" onAction="#handleUndeploy" disable="true"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </SplitPane>
+    </center>
+    
+    <!-- Bottom: Status Bar -->
+    <bottom>
+        <HBox styleClass="status-bar" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="5" right="10" bottom="5" left="10"/>
+            </padding>
+            
+            <Label fx:id="statusBarLabel" text="Ready"/>
+        </HBox>
+    </bottom>
+    
+</BorderPane>

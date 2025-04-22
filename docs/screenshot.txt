@@ -1,0 +1,17 @@
+This is a placeholder for the JBoss/WildFly Manager application screenshot.
+
+The actual screenshot would show:
+
+1. The main application window (1000x900 pixels)
+2. The connection panel at the top with fields for host, port, username, and password
+3. The split pane in the center with:
+   - Left side: Tree view showing JMS queues and EJBs
+   - Right side: Details panel showing properties of the selected resource
+4. Operation buttons for managing the selected resource
+5. Status bar at the bottom showing operation feedback
+
+To replace this placeholder with an actual screenshot:
+1. Run the application
+2. Take a screenshot of the main window
+3. Save the screenshot as "screenshot.png" in this directory
+4. Remove this text file
