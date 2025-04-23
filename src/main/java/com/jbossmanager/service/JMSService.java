@@ -30,12 +30,12 @@ public class JMSService {
         
         List<JMSQueue> queues = new ArrayList<>();
         
-        // Create operation to read all JMS queues
+        // Create operation to read all JMS queues (child resources)
         ModelNode op = new ModelNode();
         op.get("operation").set("read-children-resources");
         op.get("child-type").set("jms-queue");
         
-        // Set the subsystem address
+        // Set the subsystem address (we can add custom ones later)
         ModelNode address = op.get("address");
         address.add("subsystem", "messaging-activemq");
         address.add("server", "default");

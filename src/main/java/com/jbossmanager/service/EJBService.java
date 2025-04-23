@@ -126,7 +126,8 @@ public class EJBService {
             if (ejbSubsystem.hasDefined("message-driven-bean")) {
                 ModelNode mdbBeans = ejbSubsystem.get("message-driven-bean");
                 for (String beanName : mdbBeans.keys()) {
-                    ModelNode bean = mdbBeans.get(beanName);
+                    ModelNode bean = mdbBeans.get(beanName); // Get the bean node
+                    // Check if the bean is a message-driven bean
                     EJBComponent ejb = new EJBComponent();
                     ejb.setName(beanName);
                     ejb.setType("Message-Driven Bean");
