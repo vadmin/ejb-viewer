@@ -26,6 +26,8 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
     - name: Verify Java version
       run: java -version
+    - name: Verify Maven Java version
+      run: mvn -version
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
