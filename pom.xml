@@ -6,7 +6,7 @@
 
     <groupId>com.vekna.jfx.jbossmanager</groupId>
     <artifactId>ejb-viewer</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -103,4 +103,10 @@
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/vadmin/ejb-viewer</url>
+        </repository>
+    </distributionManagement>
 </project>
