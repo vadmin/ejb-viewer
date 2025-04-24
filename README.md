@@ -1,3 +1,5 @@
+[![Maven Package](https://github.com/vadmin/ejb-viewer/actions/workflows/maven-publish.yml/badge.svg?branch=main)](https://github.com/vadmin/ejb-viewer/actions/workflows/maven-publish.yml)
+
 # JBoss/WildFly Manager
 
 A comprehensive JavaFX application for managing JBoss EAP and WildFly servers. This application provides a user-friendly interface to connect to remote JBoss/WildFly servers and manage JMS queues and EJBs.
